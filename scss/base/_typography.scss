@@ -1,0 +1,43 @@
+body,
+input {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: 'Merriweather', serif;
+}
+
+/*
+  Heading utility classes
+*/
+
+.heading--primary {
+  font-size: 5rem;
+}
+
+.heading--secondary {
+  font-size: 4rem;
+}
+
+.heading--tertiary {
+  font-size: 2.6rem;
+}
+
+.heading--quad {
+  font-size: 2rem;
+}
+
+.heading--quin {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+/*
+  font-weight utility classes
+*/
+
+.weight--light {
+  font-weight: 400;
+}
+
+.weight--bold {
+  font-weight: 700;
+}

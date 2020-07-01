@@ -1,0 +1,57 @@
+// Form layout
+
+.search__form {
+  display: flex;
+}
+
+// General form styles
+
+input,
+button {
+  border-radius: 1rem;
+  margin: 0;
+  background: none;
+  border: 3px solid #fff;
+  padding: 1.2rem 1.6rem;
+  font-size: 20px;
+  color: #fff;
+}
+
+input[type='text'] {
+  width: 260px;
+  max-width: 90vw;
+}
+
+input::placeholder {
+  color: rgba($color-white, 0.6);
+}
+
+// Search input field
+.search__input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 0.4s ease-out;
+  z-index: 10;
+}
+
+// Search input label
+.search__label {
+  position: absolute;
+  margin-top: -8rem;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 0.4s ease-in-out;
+  line-height: 1.1;
+  font-size: 4rem;
+  z-index: 10;
+}
+
+// Slide search area to top when input field contains a value
+#search:not(:placeholder-shown),
+#search:not(:placeholder-shown) ~ label {
+  top: 14rem;
+  transform: translateX(-50%) translateY(-50%);
+}

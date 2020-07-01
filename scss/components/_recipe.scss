@@ -1,0 +1,164 @@
+/*
+    Recipe container + close button
+  */
+
+.recipe {
+  &__container {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns:
+      [infobar-start] 1fr [infobar-end mainbar-start] repeat(2, 1fr)
+      [mainbar-end];
+    grid-template-rows:
+      minmax(20rem, min-content)
+      minmax(20rem, min-content);
+  }
+
+  &__close-btn {
+    background: none;
+    position: absolute;
+    top: $padding-medium;
+    right: $padding-medium;
+    color: $color-white;
+
+    &:hover {
+      background: $color-white;
+      color: var(--color-primary);
+    }
+
+    @media only screen and (max-width: 850px) {
+      position: fixed;
+      background: $color-black;
+      top: $padding-small;
+      right: $padding-small;
+      border: none;
+    }
+  }
+
+  /*
+    Recipe image section
+  */
+
+  &__img {
+    grid-column: infobar-start / infobar-end;
+    height: 300px;
+
+    @media only screen and (max-width: 450px) {
+      grid-column: infobar-start / mainbar-end;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /*
+    Recipe heading section
+  */
+  &__heading {
+    grid-column: mainbar-start / mainbar-end;
+    padding: $padding-medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--color-primary);
+
+    @media only screen and (max-width: 450px) {
+      grid-column: infobar-start / mainbar-end;
+    }
+
+    & .heading {
+      &__more-info {
+        display: flex;
+      }
+
+      &__category {
+        color: rgba($color-white, 0.9);
+        padding-right: $margin-tiny;
+        border-right: 2px solid #fff;
+      }
+
+      &__tags {
+        color: rgba($color-white, 0.9);
+        padding-left: $margin-tiny;
+      }
+    }
+  }
+
+  /*
+    Recipe ingredients section
+  */
+  &__ingredients {
+    grid-column: infobar-start / infobar-end;
+    padding: $padding-medium;
+
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+
+    @media only screen and (max-width: 850px) {
+      grid-column: infobar-start / mainbar-end;
+    }
+
+    & .ingredients {
+      list-style: none;
+
+      @media only screen and (max-width: 850px) {
+        column-count: 2;
+        column-rule: 1px solid $color-grey;
+        column-gap: 5rem;
+      }
+
+      @media only screen and (max-width: 500px) {
+        column-count: 1;
+        column-rule: 1px solid $color-grey;
+        column-gap: 0;
+      }
+
+      &__title {
+        margin-bottom: $margin-small;
+        text-decoration: underline;
+
+        @media only screen and (max-width: 850px) {
+        }
+      }
+
+      &__item {
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+        & span {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  /*
+    Recipe instructions section
+  */
+  &__instructions {
+    grid-column: mainbar-start / mainbar-end;
+    padding: $padding-medium;
+
+    background-color: $color-white;
+    color: var(--color-primary-dark);
+
+    @media only screen and (max-width: 850px) {
+      grid-column: infobar-start / mainbar-end;
+    }
+  }
+
+  & .instructions__title {
+    margin-bottom: $margin-small;
+    text-decoration: underline;
+
+    @media only screen and (max-width: 850px) {
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 500px) {
+      text-align: left;
+    }
+  }
+}

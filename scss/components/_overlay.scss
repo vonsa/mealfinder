@@ -1,0 +1,17 @@
+.overlay {
+  visibility: hidden;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba($color-black, 0.6);
+  opacity: 0;
+  z-index: 11;
+  transition: all 0.6s ease-in-out;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,30 @@
+:root {
+  --color-primary: #c55c5c;
+  --color-primary-light: #f2eeea;
+  --color-primary-dark: #311212;
+  --color-secondary: #bc2007;
+}
+
+/*
+  Colors for use in rgba etc.
+*/
+
+$color-black: #000;
+$color-white: #fff;
+$color-grey: #999;
+$color-shadow: #002244;
+
+$color-primary-dark: #311212;
+$color-secondary: #bc2007;
+
+// Padding & Margin
+
+$padding-tiny: 1rem;
+$padding-small: 2rem;
+$padding-medium: 4rem;
+$padding-large: 8rem;
+
+$margin-tiny: 1rem;
+$margin-small: 2rem;
+$margin-medium: 4rem;
+$margin-large: 8rem;

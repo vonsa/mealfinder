@@ -1,0 +1,72 @@
+.home {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+#page-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  object-fit: cover;
+}
+
+/*
+    Meals search results section
+  */
+
+.main {
+  margin-top: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/*
+    Single meal recipe popup section
+  */
+
+.recipe {
+  max-width: 1200px;
+  width: 100%;
+  max-height: 100vh;
+  padding: $padding-medium;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  @media (hover: hover) {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  &::-webkit-scrollbar {
+    @media (hover: hover) {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 850px) {
+    padding: 0;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}

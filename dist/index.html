@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" /> -->
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <script src="assets\scripts\index.min.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body class="home">
+  <video class="background-video" autoplay muted loop>
+    <source src="./assets/img/bgvideo.mp4" type="video/mp4">
+  </video>
+  <div id="page-container">
+    <div class="overlay"></div>
+    <img src="assets/img/spinner.svg" class="spinner"></img>
+
+    <template id="recipe">
+      <section class="section recipe">
+        <div class="recipe__container">
+          <button class="recipe__close-btn">&#x2716;</button>
+          <div class="recipe__img">
+            <img src="assets/img/food.jpg" alt="Your favorite food!">
+          </div>
+          <div class="recipe__heading">
+            <h3 class="heading__area heading--quad">
+              <!-- Inserted dynamically by JavaScript -->
+            </h3>
+            <h2 class="heading__title heading--secondary">
+              <!-- Inserted dynamically by JavaScript -->
+            </h2>
+            <div class="heading__more-info">
+              <h5 class="heading__category heading--quin">
+                <!-- Inserted dynamically by JavaScript -->
+              </h5>
+              <h5 class="heading__tags heading--quin">
+                <!-- Inserted dynamically by JavaScript -->
+              </h5>
+            </div>
+          </div>
+          <div class="recipe__ingredients">
+            <h3 class="ingredients__title heading--quad">Ingredients</h3>
+            <ul class="ingredients">
+              <!-- Inserted dynamically by JavaScript -->
+
+            </ul>
+          </div>
+          <div class="recipe__instructions">
+            <h3 class="instructions__title heading--quad">Instructions</h3>
+            <p class="instructions__content">
+              <!-- Inserted dynamically by JavaScript -->
+            </p>
+
+          </div>
+        </div>
+      </section>
+    </template>
+
+
+
+    <section class="section main">
+      <!-- <div class="search"> -->
+      <form class="search__form" id="submit">
+        <input autocomplete="off" type="text" id="search" class="search__input" placeholder="Search for a meal..." />
+        <label for="search" class="search__label">Meal finder</label>
+      </form>
+      <!-- </div> -->
+      <div id="meals" class="meals">
+        <!-- Inserted dynamically by JavaScript -->
+      </div>
+      <h2 class="heading--secondary results--none">No results found</h2>
+
+    </section>
+  </div>
+
+
+</body>
+
+</html>
