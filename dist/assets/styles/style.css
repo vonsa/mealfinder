@@ -382,7 +382,8 @@ input::placeholder {
   transform: translate(-50%, -50%);
   z-index: 12;
   overflow-y: scroll;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; }
   @media (hover: hover) {
     .recipe {
       -ms-overflow-style: none;
