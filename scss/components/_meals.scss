@@ -94,6 +94,10 @@
     justify-content: center;
     align-items: center;
     pointer-events: none;
+
+    @media (hover: none) {
+      display: none;
+    }
   }
 
   &:hover::before {

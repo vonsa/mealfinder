@@ -148,6 +148,9 @@ input {
     justify-content: center;
     align-items: center;
     pointer-events: none; }
+    @media (hover: none) {
+      .meal .img__overlay {
+        display: none; } }
   .meal:hover::before {
     visibility: visible; }
 
