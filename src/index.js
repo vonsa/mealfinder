@@ -23,3 +23,12 @@
 import { MealsHandler } from './MealsHandler';
 
 const meals = new MealsHandler();
+
+// Responsive background video
+const video = document.querySelector('video');
+if (window.innerWidth > 800) {
+  video.innerHTML = '<source src="./assets/img/bgvideo.mp4" type="video/mp4">';
+} else {
+  video.innerHTML =
+    '<source src="./assets/img/bgvideomobile.mp4" type="video/mp4">';
+}
