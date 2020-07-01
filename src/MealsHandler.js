@@ -200,7 +200,7 @@ export class MealsHandler {
   */
 
   viewClickedMeal() {
-    const mealInfo = event.path.find((item) => {
+    const mealInfo = event.composedPath().find((item) => {
       if (item.classList) {
         return item.classList.contains('meal-data');
       } else {
