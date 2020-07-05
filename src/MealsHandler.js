@@ -178,6 +178,11 @@ export class MealsHandler {
         this.mealsEl.appendChild(this.createMealElementNode(matchedMeal))
       );
     }
+    if (this.mealNodes.length === 0 && this.searchMealInput.value.length > 0) {
+      this.noResultsIndicator.classList.add('active');
+    } else {
+      this.noResultsIndicator.classList.remove('active');
+    }
   }
 
   // Remove all meal nodes from parent element 'mealsEl'
